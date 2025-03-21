@@ -225,7 +225,7 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-**NB**: Ici 172.16.0.0/16 sera la plage du réseau privé de notre cluster et pour rappel l'ip 192.168.1.2 est celle de la master. 
+**NB**: Ici 172.16.0.0/16 sera la plage du réseau privé de notre cluster et pour rappel l'ip 192.168.1.30 est celle de la master. 
 
 **Installation du module complémentaire réseau Calico**
 Ceci permettre la communication en nos noeuds, nous pouvons egalement utiliser flannel

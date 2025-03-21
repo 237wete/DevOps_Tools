@@ -219,7 +219,7 @@ sudo systemctl enable --now kubelet
 Sur le nœud master (k8s-control) uniquement, initialisons le cluster et configurons l'accès kubectl.
 
 ```
-sudo kubeadm init --pod-network-cidr 172.16.0.0/16 --apiserver-advertise-address 192.168.1.2 --kubernetes-version 1.30.4
+sudo kubeadm init --pod-network-cidr 172.16.0.0/16 --apiserver-advertise-address 192.168.1.30 --kubernetes-version 1.30.4
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config

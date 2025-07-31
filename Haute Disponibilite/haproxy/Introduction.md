@@ -57,6 +57,13 @@ Nous verrons un message indiquant que **prometheus-exporter** natif à HAProxy e
 sudo groupadd -g 1001 haproxy
 sudo useradd -g 1001 -u 1002 -m -d /var/lib/haproxy -s /sbin/nologin -c haproxy haproxy
 ```
+ou les commmandes ci-dessous
+```
+sudo mkdir -p /var/lib/haproxy
+sudo chown haproxy:haproxy /var/lib/haproxy
+sestatus
+sudo setenforce 0
+```
 
 - Créons un répertoire pour stocker les fichiers de configuration HAProxy
 

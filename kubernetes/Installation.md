@@ -64,7 +64,7 @@ sudo hostnamectl set-hostname k8s-control
 Sur le noeud worker1 (k8s-worker1)
 
 ```
-sudo hostnamectl set-hostname worker1
+sudo hostnamectl set-hostname k8s-worker1
 ```
 Sur le noeud Worker2 (k8s-worker2) 
 

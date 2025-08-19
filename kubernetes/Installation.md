@@ -158,7 +158,7 @@ sudo systemctl enable crio.service
 **Sur le noeud master**
 
 ```
-sudo systemctl start firewall-cmd
+sudo systemctl start firewalld.service
 sudo firewall-cmd --permanent --add-port={6443/tcp,2379-2380/tcp,10250/tcp,10257/tcp,10259/tcp}
 sudo firewall-cmd --add-masquerade --permanent
 sudo firewall-cmd --reload
@@ -166,7 +166,7 @@ sudo firewall-cmd --reload
 
 **Sur les noeuds worker**
 ```
-sudo systemctl start firewall-cmd
+sudo systemctl start firewalld.service
 sudo firewall-cmd --permanent --add-port={10250/tcp,10256/tcp,30000-32767/tcp}
 sudo firewall-cmd --add-masquerade --permanent
 sudo firewall-cmd --reload

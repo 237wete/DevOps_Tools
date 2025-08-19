@@ -146,7 +146,7 @@ gpgkey=https://pkgs.k8s.io/addons:/cri-o:/stable:/v1.30/rpm/repodata/repomd.xml.
 exclude=cri-o
 ```
 ```
-sudo dnf install -y cri-o --disableexcludes=cri-o
+sudo dnf install cri-o-1.30.6 --disableexcludes=cri-o
 ```
 ```
 sudo systemctl start crio.service

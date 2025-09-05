@@ -73,5 +73,14 @@ L'option *-o* permet d'indiquer la destination de la sauvegarde.<br>
 ```
 ls $HOME
 ```
+
+## Pour restaurer cette image à partir du fichier tar
+
+vous pouvez utiliser la commande suivante :
+
+```
+docker load -i $HOME/website-0.0.1.tar
+```
+
 *Le tutoriel ci-dessous s'inspire des cours CKAD sur ACLOUD GURU et la plateforme GITHUB willbrid de **WILLIAM NGASSAM***
 

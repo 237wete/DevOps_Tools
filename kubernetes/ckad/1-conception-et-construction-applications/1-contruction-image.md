@@ -38,40 +38,40 @@ COPY index.html /usr/share/nginx/html/
 
 - Nous construisons notre image version 0.0.1 avec la commande docker, nous pouvons aussi utiliser les commandes podman ou crictl
 ```
-docker build -t website:0.0.1 .
+docker build -t website:1.0.0 .
 ```
 
+## Exploitation du container de l'image
+- Nous créons un conteneur à partir de l'image *website:1.0.0* créé ci-dessus
 
+```
+docker run --rm --name website -d -p 8080:80 website:1.0.0
+```
 
+- Nous pouvons vérifier si le conteneur écoute bien sur le port 8080
+```
+curl localhost:8080
+```
 
+- Nous pouvons stopper et supprimer notre conteneur
+```
+docker container stop website
+```
 
+```
+docker container rm website
+```
 
+- Nous pouvons sauvegarder notre image dans un fichier archivé
+```
+docker save -o $HOME/website.1.0.0.tar website:1.0.0
+```
 
+L'option *-o* permet d'indiquer la destination de la sauvegarde.<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*Le tutoriel ci-dessous s'inspire des cours CKAD sur ACLOUD GURU et la plateforme GITHUB willbrid de WILLIAM NGASSAM*
+- Nous pouvons aussi vérifier si le fichier de sauvegarde a été créé
+```
+ls $HOME
+```
+*Le tutoriel ci-dessous s'inspire des cours CKAD sur ACLOUD GURU et la plateforme GITHUB willbrid de **WILLIAM NGASSAM***
 

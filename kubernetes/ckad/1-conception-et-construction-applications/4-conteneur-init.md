@@ -1,6 +1,6 @@
 # Conteneur init
 Les conteneurs d'initialisation s'exécutent jusqu'à la fin avant le démarrage du conteneur principal.<br>
-Ajoutez des conteneurs init en utilisant le champ *initContainers* du PodSpec.<br>
+Ajoutez des conteneurs init en utilisant le champ *initContainers* du Pod Spec.<br>
 
 - Nous créons un pod avec un conteneur Init qui retarde le démarrage de 60 secondes.
 ```
